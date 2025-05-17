@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema METATONEHEN para WordPress - Guía Completa</title>
+    <style>
+        :root {
+            --dark: #0a0722;
+            --indigo: #4A1A9E;
+            --indigo-dark: #2A0A5D;
+            --violet-light: #a675c8;
+            --gold: #D4AF37;
+            --gold-light: #F5D76A;
+            --off-white: #F5F5F5;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: var(--off-white);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--indigo);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .greek-text {
+            font-style: italic;
+            color: var(--violet-light);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px 10px;
+            border-radius: 30px;
+            background-color: rgba(42, 10, 93, 0.5);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        
+        nav a:hover {
+            background-color: var(--indigo);
+            border: 1px solid var(--gold);
+            transform: translateY(-3px);
+        }
+        
+        section {
+            margin: 60px 0;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: rgba(42, 10, 93, 0.3);
+            border: 1px solid var(--indigo);
+        }
+        
+        h2 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, var(--gold), var(--indigo));
+        }
+        
+        h3 {
+            color: var(--gold-light);
+            margin-top: 30px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        pre {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            border-left: 3px solid var(--gold);
+        }
+        
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .color-swatch {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .color-item {
+            width: 150px;
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .color-preview {
+            height: 100px;
+        }
+        
+        .color-info {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .color-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+        
+        .color-hex {
+            font-family: monospace;
+            color: var(--violet-light);
+        }
+        
+        .dark {
+            background-color: var(--dark);
+        }
+        
+        .indigo {
+            background-color: var(--indigo);
+        }
+        
+        .indigo-dark {
+            background-color: var(--indigo-dark);
+        }
+        
+        .violet-light {
+            background-color: var(--violet-light);
+        }
+        
+        .gold {
+            background-color: var(--gold);
+        }
+        
+        .gold-light {
+            background-color: var(--gold-light);
+        }
+        
+        .off-white {
+            background-color: var(--off-white);
+            color: var(--dark);
+        }
+        
+        .white {
+            background-color: var(--white);
+            color: var(--dark);
+        }
+        
+        .typography-preview {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        
+        .font-example {
+            margin-bottom: 25px;
+        }
+        
+        .font-family {
+            font-size: 1.2em;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .font-weight {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .weight-example {
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .weight-label {
+            color: var(--violet-light);
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .metatron-layout {
+            margin: 40px 0;
+            position: relative;
+            text-align: center;
+        }
+        
+        .metatron-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cube-base {
+            width: 100%;
+            height: auto;
+        }
+        
+        .vertex-points {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .vertex {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(74, 26, 158, 0.9) 0%, rgba(42, 10, 93, 0.9) 100%);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--white);
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.8em;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+        
+        .vertex:hover {
+            transform: scale(1.1);
+            background: radial-gradient(circle, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--dark);
+            z-index: 10;
+        }
+        
+        .vertex-name {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        
+        .vertex-category {
+            font-size: 0.8em;
+            color: var(--gold);
+        }
+        
+        .vertex:hover .vertex-category {
+            color: var(--indigo-dark);
+        }
+        
+        .vertex-1 { top: 0%; left: 50%; transform: translateX(-50%); }
+        .vertex-2 { top: 18%; right: 15%; }
+        .vertex-3 { bottom: 18%; right: 15%; }
+        .vertex-4 { bottom: 0%; left: 50%; transform: translateX(-50%); }
+        .vertex-5 { bottom: 18%; left: 15%; }
+        .vertex-6 { top: 18%; left: 15%; }
+        
+        .css-code-block {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            color: var(--off-white);
+            border-left: 3px solid var(--gold);
+        }
+        
+        .component {
+            margin: 40px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .component-preview {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(42, 10, 93, 0.3);
+            border: 1px solid var(--indigo);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 10px 5px;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--dark);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: var(--dark);
+        }
+        
+        .card {
+            background: linear-gradient(135deg, rgba(42, 10, 93, 0.7) 0%, rgba(74, 26, 158, 0.7) 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-title {
+            color: var(--gold);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .card-body {
+            color: var(--off-white);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--violet-light), transparent);
+            margin: 60px 0;
+            border: none;
+        }
+        
+        .export-steps {
+            counter-reset: step-counter;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .export-steps li {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 30px;
+            counter-increment: step-counter;
+        }
+        
+        .export-steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 35px;
+            height: 35px;
+            background-color: var(--indigo);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 1px solid var(--gold);
+        }
+        
+        .note {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .metatron-animation-code {
+            margin-top: 30px;
+        }
+        
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .column {
+            flex: 1;
+            padding: 0 15px;
+            min-width: 300px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--indigo);
+        }
+        
+        th {
+            background-color: rgba(42, 10, 93, 0.5);
+            color: var(--gold);
+        }
+        
+        tr:hover {
+            background-color: rgba(42, 10, 93, 0.2);
+        }
+        
+        .code-label {
+            color: var(--gold);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .color-item {
+                width: calc(50% - 20px);
+            }
+            
+            .two-column {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .vertex {
+                width: 60px;
+                height: 60px;
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <h1>METATONEHEN</h1>
+        <p class="greek-text">μετὰ τὸ νέἕν</p>
+        <p>Guía completa para exportar el diseño a WordPress</p>
+    </header>
+    
+    <nav class="container">
+        <a href="#palette">Paleta de Colores</a>
+        <a href="#typography">Tipografía</a>
+        <a href="#metatron">Cubo de Metatrón</a>
+        <a href="#components">Componentes</a>
+        <a href="#animations">Animaciones</a>
+        <a href="#export">Exportación</a>
+    </nav>
+    
+    <main class="container">
+        <section id="intro">
+            <h2>Introducción</h2>
+            <p>Esta guía proporciona todos los detalles necesarios para implementar el diseño de METATONEHEN en WordPress, manteniendo la coherencia visual y la organización basada en el Cubo de Metatrón. A continuación encontrarás información detallada sobre la paleta de colores, la tipografía, los componentes principales y el código CSS necesario.</p>
+            
+            <div class="note">
+                <strong>Nota importante:</strong> Para implementar correctamente este diseño en WordPress, se recomienda utilizar un tema personalizable como Astra, Divi, Elementor o similar, que permita personalizar completamente los estilos CSS y la estructura del sitio.
+            </div>
+        </section>
+        
+        <section id="palette">
+            <h2>Paleta de Colores</h2>
+            <p>La paleta de colores de METATONEHEN está inspirada en el cosmos y la geometría sagrada, con tonos profundos de índigo y violeta contrastados con dorado para simbolizar la iluminación espiritual.</p>
+            
+            <div class="color-swatch">
+                <div class="color-item">
+                    <div class="color-preview dark"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark</div>
+                        <div class="color-hex">#0a0722</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview indigo"></div>
+                    <div class="color-info">
+                        <div class="color-name">Indigo</div>
+                        <div class="color-hex">#4A1A9E</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview indigo-dark"></div>
+                    <div class="color-info">
+                        <div class="color-name">Indigo Dark</div>
+                        <div class="color-hex">#2A0A5D</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview violet-light"></div>
+                    <div class="color-info">
+                        <div class="color-name">Violet Light</div>
+                        <div class="color-hex">#a675c8</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview gold"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gold</div>
+                        <div class="color-hex">#D4AF37</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview gold-light"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gold Light</div>
+                        <div class="color-hex">#F5D76A</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview off-white"></div>
+                    <div class="color-info">
+                        <div class="color-name">Off White</div>
+                        <div class="color-hex">#F5F5F5</div>
+                    </div>
+                </div>
+                
+                <div class="color-item">
+                    <div class="color-preview white"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-hex">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Implementación en WordPress</h3>
+            <p>Para implementar esta paleta de colores en WordPress:</p>
+            <ol>
+                <li>Ve a <strong>Apariencia > Personalizar</strong> en tu panel de WordPress</li>
+                <li>Busca la opción de colores o tema (varía según el tema que estés utilizando)</li>
+                <li>Define los colores principales y secundarios según la paleta mostrada arriba</li>
+                <li>Si tu tema no permite personalizar todos estos colores, utiliza el siguiente código CSS personalizado</li>
+            </ol>
+            
+            <div class="css-code-block">
+:root {
+    --dark: #0a0722;
+    --indigo: #4A1A9E;
+    --indigo-dark: #2A0A5D;
+    --violet-light: #a675c8;
+    --gold: #D4AF37;
+    --gold-light: #F5D76A;
+    --off-white: #F5F5F5;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--off-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--gold);
+}
+
+a {
+    color: var(--gold);
+}
+
+a:hover {
+    color: var(--gold-light);
+}
+            </div>
+        </section>
+        
+        <section id="typography">
+            <h2>Tipografía</h2>
+            <p>La tipografía de METATONEHEN combina elegancia y legibilidad para crear una experiencia de lectura agradable que complemente la estética cósmica y espiritual del sitio.</p>
+            
+            <div class="typography-preview">
+                <div class="font-example">
+                    <div class="font-family">Montserrat (Títulos)</div>
+                    <div class="font-weight">
+                        <div class="weight-example">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 1.2em;">METATONEHEN</div>
+                        </div>
+                        <div class="weight-example">
+                            <div class="weight-label">Medium (500)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 1.2em;">METATONEHEN</div>
+                        </div>
+                        <div class="weight-example">
+                            <div class="weight-label">Bold (700)</div>
+                            <div style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2em;">METATONEHEN</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="font-example">
+                    <div class="font-family">Lato (Cuerpo de texto)</div>
+                    <div class="font-weight">
+                        <div class="weight-example">
+                            <div class="weight-label">Regular (400)</div>
+                            <div style="font-family: 'Lato', sans-serif; font-weight: 400;">Educación espiritual para el nuevo paradigma. Descubre la sabiduría antigua a través de una perspectiva moderna.</div>
+                        </div>
+                        <div class="weight-example">
+                            <div class="weight-label">Italic (400)</div>
+                            <div style="font-family: 'Lato', sans-serif; font-weight: 400; font-style: italic;">μετὰ τὸ νέἕν - Más allá de lo nuevo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Implementación en WordPress</h3>
+            <p>Para implementar la tipografía en WordPress:</p>
+            <ol>
+                <li>Instala el plugin "Google Fonts Typography" o similar</li>
+                <li>Configura Montserrat como fuente para títulos (h1-h6)</li>
+                <li>Configura Lato como fuente para el cuerpo de texto</li>
+                <li>Alternativamente, agrega el siguiente código al CSS personalizado del tema</li>
+            </ol>
+            
+            <div class="css-code-block">
+/* Importar fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Configuración de tipografía */
+:root {
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.greek-text {
+    font-family: var(--body-font);
+    font-style: italic;
+    color: var(--violet-light);
+}
+
+/* Estilos específicos para títulos */
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+            </div>
+        </section>
+        
+        <section id="metatron">
+            <h2>Cubo de Metatrón y Organización Hexagonal</h2>
+            <p>El Cubo de Metatrón es un elemento central en el diseño de METATONEHEN, no solo como elemento visual, sino como estructura organizativa para los cursos y secciones del sitio.</p>
+            
+            <div class="metatron-layout">
+                <div class="metatron-container">
+                    <img src="/static/images/metatron_cube_enhanced.svg" alt="Cubo de Metatrón Base" class="cube-base">
+                    <div class="vertex-points">
+                        <a href="#" class="vertex vertex-1">
+                            <span class="vertex-name">Geometría Sagrada</span>
+                            <span class="vertex-category">Espiritualidad</span>
+                        </a>
+                        <a href="#" class="vertex vertex-2">
+                            <span class="vertex-name">Astrología</span>
+                            <span class="vertex-category">Cosmos</span>
+                        </a>
+                        <a href="#" class="vertex vertex-3">
+                            <span class="vertex-name">Diseño Humano</span>
+                            <span class="vertex-category">Autoconocimiento</span>
+                        </a>
+                        <a href="#" class="vertex vertex-4">
+                            <span class="vertex-name">Coaching</span>
+                            <span class="vertex-category">Desarrollo</span>
+                        </a>
+                        <a href="#" class="vertex vertex-5">
+                            <span class="vertex-name">Meditación</span>
+                            <span class="vertex-category">Práctica</span>
+                        </a>
+                        <a href="#" class="vertex vertex-6">
+                            <span class="vertex-name">Rituales</span>
+                            <span class="vertex-category">Ceremonias</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Estructura y Posicionamiento</h3>
+            <p>Los vértices del Cubo de Metatrón representan las principales categorías de cursos y están posicionados en una distribución hexagonal alrededor del centro. Esta disposición se mantiene coherente en todo el sitio.</p>
+            
+            <div class="two-column">
+                <div class="column">
+                    <h4>Posiciones de los Vértices</h4>
+                    <table>
+                        <tr>
+                            <th>Vértice</th>
+                            <th>Posición</th>
+                            <th>Categoría</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Superior</td>
+                            <td>Geometría Sagrada</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Superior Derecha</td>
+                            <td>Astrología</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Inferior Derecha</td>
+                            <td>Diseño Humano</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Inferior</td>
+                            <td>Coaching</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Inferior Izquierda</td>
+                            <td>Meditación</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Superior Izquierda</td>
+                            <td>Rituales</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="column">
+                    <h4>Implementación CSS</h4>
+                    <div class="css-code-block">
+/* Posicionamiento de vértices */
+.vertex-1 { 
+    top: 0%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.vertex-2 { 
+    top: 18%; 
+    right: 15%; 
+}
+.vertex-3 { 
+    bottom: 18%; 
+    right: 15%; 
+}
+.vertex-4 { 
+    bottom: 0%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.vertex-5 { 
+    bottom: 18%; 
+    left: 15%; 
+}
+.vertex-6 { 
+    top: 18%; 
+    left: 15%; 
+}
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Implementación en WordPress</h3>
+            <p>Para implementar el Cubo de Metatrón y su organización en WordPress:</p>
+            
+            <div class="two-column">
+                <div class="column">
+                    <ol>
+                        <li>Usa un constructor de páginas como Elementor, Divi o Visual Composer</li>
+                        <li>Crea una sección con posición relativa para contener el cubo</li>
+                        <li>Añade la imagen SVG del Cubo de Metatrón como fondo</li>
+                        <li>Crea elementos HTML personalizados para cada vértice</li>
+                        <li>Aplica las clases de posicionamiento para cada vértice</li>
+                        <li>Vincula cada vértice a la categoría o página correspondiente</li>
+                    </ol>
+                </div>
+                
+                <div class="column">
+                    <div class="note">
+                        <strong>Consejo:</strong> Si tu tema WordPress no permite un control tan preciso de la posición, considera crear un HTML personalizado usando un plugin como "Custom HTML Widget" o "Shortcode HTML" para insertar este componente.
+                    </div>
+                    
+                    <p>Alternativa: Utiliza la imagen del Cubo de Metatrón como mapa de imagen y define áreas clickeables para cada vértice usando el elemento <code>&lt;map&gt;</code> de HTML.</p>
+                </div>
+            </div>
+            
+            <h3>Código HTML Completo para el Cubo de Metatrón</h3>
+            <div class="css-code-block">
+<div class="metatron-courses-container">
+    <div class="metatron-cube-large">
+        <img src="/wp-content/uploads/metatron_cube_enhanced.svg" alt="Cubo de Metratrón">
+        
+        <a href="/categoria/geometria-sagrada" class="vertex-course vertex-1">
+            <div class="vertex-content">
+                <span class="vertex-name">Geometría Sagrada</span>
+                <span class="vertex-category">Espiritualidad</span>
+            </div>
+        </a>
+        
+        <a href="/categoria/astrologia" class="vertex-course vertex-2">
+            <div class="vertex-content">
+                <span class="vertex-name">Astrología</span>
+                <span class="vertex-category">Cosmos</span>
+            </div>
+        </a>
+        
+        <a href="/categoria/diseno-humano" class="vertex-course vertex-3">
+            <div class="vertex-content">
+                <span class="vertex-name">Diseño Humano</span>
+                <span class="vertex-category">Autoconocimiento</span>
+            </div>
+        </a>
+        
+        <a href="/categoria/coaching" class="vertex-course vertex-4">
+            <div class="vertex-content">
+                <span class="vertex-name">Coaching</span>
+                <span class="vertex-category">Desarrollo</span>
+            </div>
+        </a>
+        
+        <a href="/categoria/meditacion" class="vertex-course vertex-5">
+            <div class="vertex-content">
+                <span class="vertex-name">Meditación</span>
+                <span class="vertex-category">Práctica</span>
+            </div>
+        </a>
+        
+        <a href="/categoria/rituales" class="vertex-course vertex-6">
+            <div class="vertex-content">
+                <span class="vertex-name">Rituales</span>
+                <span class="vertex-category">Ceremonias</span>
+            </div>
+        </a>
+    </div>
+</div>
+            </div>
+            
+            <div class="css-code-block">
+/* CSS adicional para el Cubo de Metatrón */
+.metatron-courses-container {
+    position: relative;
+    margin: 30px auto 70px;
+    min-height: 600px;
+}
+
+.metatron-cube-large {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.metatron-cube-large img {
+    width: 100%;
+    opacity: 0.7;
+}
+
+/* Estilos para los vértices */
+.vertex-course {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(74, 26, 158, 0.9) 0%, rgba(42, 10, 93, 0.9) 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    overflow: visible;
+    z-index: 3;
+}
+
+.vertex-course:hover {
+    transform: scale(1.1);
+    background: radial-gradient(circle, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--dark);
+    z-index: 10;
+}
+
+.vertex-content {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.vertex-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    line-height: 1.2;
+    display: block;
+}
+
+.vertex-category {
+    font-size: 0.65rem;
+    color: var(--gold);
+    display: block;
+    line-height: 1.2;
+}
+
+.vertex-course:hover .vertex-category {
+    color: var(--indigo-dark);
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 767.98px) {
+    .vertex-course {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .vertex-name {
+        font-size: 0.7rem;
+    }
+    
+    .vertex-category {
+        font-size: 0.6rem;
+    }
+}
+            </div>
+        </section>
+        
+        <section id="components">
+            <h2>Componentes Principales</h2>
+            <p>A continuación se presentan los componentes principales del diseño y cómo implementarlos en WordPress.</p>
+            
+            <div class="component">
+                <h3>1. Botones</h3>
+                <div class="component-preview">
+                    <a href="#" class="btn btn-primary">Botón Primario</a>
+                    <a href="#" class="btn btn-outline">Botón Outline</a>
+                </div>
+                <div class="code-label">CSS para Botones:</div>
+                <div class="css-code-block">
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--dark);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+.btn-outline:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+                </div>
+            </div>
+            
+            <div class="component">
+                <h3>2. Tarjetas</h3>
+                <div class="component-preview">
+                    <div class="card">
+                        <h3 class="card-title">Título de la Tarjeta</h3>
+                        <div class="card-body">
+                            <p>Contenido de la tarjeta con información sobre cursos, sesiones u otros elementos del sitio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="code-label">CSS para Tarjetas:</div>
+                <div class="css-code-block">
+.card {
+    background: linear-gradient(135deg, rgba(42, 10, 93, 0.7) 0%, rgba(74, 26, 158, 0.7) 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    color: var(--off-white);
+}
+                </div>
+            </div>
+            
+            <div class="component">
+                <h3>3. Membresías</h3>
+                <div class="component-preview">
+                    <div class="card" style="background: linear-gradient(135deg, rgba(42, 10, 93, 0.8) 0%, rgba(74, 26, 158, 0.8) 100%);">
+                        <h3 class="card-title">Membresía Platinum</h3>
+                        <div style="font-size: 2rem; color: var(--white); margin-bottom: 20px;">$99<span style="font-size: 1rem; color: var(--violet-light);">/mes</span></div>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 30px;">
+                            <li style="padding: 10px 0; border-bottom: 1px solid rgba(166, 117, 200, 0.2);">Acceso a todos los cursos</li>
+                            <li style="padding: 10px 0; border-bottom: 1px solid rgba(166, 117, 200, 0.2);">30% descuento en sesiones</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Suscribirse</a>
+                    </div>
+                </div>
+                <div class="code-label">CSS para Tarjetas de Membresía:</div>
+                <div class="css-code-block">
+.membership-card {
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.membership-card.platinum {
+    background: linear-gradient(135deg, rgba(42, 10, 93, 0.8) 0%, rgba(74, 26, 158, 0.8) 100%);
+}
+
+.membership-card.electrum {
+    background: linear-gradient(135deg, rgba(100, 50, 150, 0.8) 0%, rgba(74, 26, 158, 0.8) 100%);
+}
+
+.membership-title {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.membership-price {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.membership-price span {
+    font-size: 1rem;
+    vertical-align: super;
+    color: var(--violet-light);
+}
+
+.membership-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.membership-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(166, 117, 200, 0.2);
+}
+                </div>
+            </div>
+        </section>
+        
+        <section id="animations">
+            <h2>Animaciones</h2>
+            <p>Las animaciones en METATONEHEN son sutiles y elegantes, diseñadas para mejorar la experiencia del usuario sin resultar abrumadoras.</p>
+            
+            <h3>1. Rotación Lenta (Flor de la Vida)</h3>
+            <div class="css-code-block">
+@keyframes slow-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.flower-of-life {
+    animation: slow-rotate 60s linear infinite;
+}
+            </div>
+            
+            <h3>2. Pulso Suave (Cubo de Metatrón)</h3>
+            <div class="css-code-block">
+@keyframes slow-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.metatron-cube {
+    animation: slow-pulse 6s ease-in-out infinite;
+}
+            </div>
+            
+            <h3>3. Transición de Página</h3>
+            <p>El efecto de transición entre páginas muestra el Cubo de Metatrón y la Flor de la Vida superpuestos con el texto griego.</p>
+            
+            <div class="metatron-animation-code">
+                <div class="code-label">JavaScript para Transición:</div>
+                <div class="css-code-block">
+// Crear overlay de transición
+const transitionOverlay = document.createElement('div');
+transitionOverlay.className = 'page-transition-overlay';
+transitionOverlay.innerHTML = `
+    <div class="transition-content">
+        <h2 class="greek-text">μετὰ τὸ νέἕν</h2>
+        <div class="sacred-geometry-container">
+            <div class="flower-of-life">
+                <img src="/wp-content/uploads/flower_of_life_enhanced.svg" alt="Flower of Life">
+            </div>
+            <div class="metatron-cube">
+                <img src="/wp-content/uploads/metatron_cube_enhanced.svg" alt="Metatron's Cube">
+            </div>
+        </div>
+    </div>
+`;
+document.body.appendChild(transitionOverlay);
+
+// Función para mostrar transición
+function showTransition() {
+    transitionOverlay.classList.add('active');
+    setTimeout(() => {
+        transitionOverlay.classList.remove('active');
+    }, 2000); // Ocultar después de 2 segundos
+}
+
+// Interceptar clics en enlaces
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a');
+    
+    if (link && 
+        link.getAttribute('href').indexOf('#') !== 0 && 
+        link.getAttribute('href').indexOf('javascript:') !== 0 && 
+        !link.getAttribute('target') && 
+        link.getAttribute('href').indexOf('http') !== 0 &&
+        !link.classList.contains('no-transition')) {
+        
+        e.preventDefault();
+        showTransition();
+        
+        setTimeout(() => {
+            window.location.href = link.getAttribute('href');
+        }, 1000); // Navegar después de 1 segundo
+    }
+});
+                </div>
+                
+                <div class="code-label">CSS para Transición:</div>
+                <div class="css-code-block">
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 7, 34, 0.97);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-transition-overlay .transition-content {
+    text-align: center;
+}
+
+.page-transition-overlay .greek-text {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 30px;
+    font-family: var(--body-font);
+    font-style: italic;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.page-transition-overlay .sacred-geometry-container {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.page-transition-overlay .flower-of-life,
+.page-transition-overlay .metatron-cube {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+}
+
+.page-transition-overlay .flower-of-life {
+    width: 100%;
+    max-width: 280px;
+    z-index: 1;
+    animation: slow-rotate 20s linear infinite, fadeIn 0.5s ease forwards;
+}
+
+.page-transition-overlay .metatron-cube {
+    width: 80%;
+    max-width: 220px;
+    z-index: 2;
+    animation: slow-pulse 3s ease-in-out infinite, fadeIn 0.8s ease forwards 0.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+                </div>
+            </div>
+            
+            <div class="note">
+                <strong>Implementación en WordPress:</strong> Para agregar el código JavaScript de la transición, usa el plugin "Insert Headers and Footers" o añádelo en la sección de JavaScript personalizado de tu tema. El CSS puede agregarse en la sección de CSS personalizado del tema.
+            </div>
+        </section>
+        
+        <hr class="divider">
+        
+        <section id="export">
+            <h2>Guía de Exportación a WordPress</h2>
+            <p>Sigue estos pasos para implementar completamente el diseño en WordPress:</p>
+            
+            <ol class="export-steps">
+                <li>
+                    <h3>Preparación</h3>
+                    <p>Instala WordPress y elige un tema altamente personalizable como Astra, Divi, o usa Elementor Pro para mayor flexibilidad.</p>
+                </li>
+                <li>
+                    <h3>Importación de Archivos Multimedia</h3>
+                    <p>Sube todas las imágenes y archivos SVG a la biblioteca multimedia de WordPress:</p>
+                    <ul>
+                        <li>Instala el plugin "Safe SVG" para permitir la carga de archivos SVG</li>
+                        <li>Ve a Medios > Añadir nuevo y sube los archivos SVG y de imagen</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Configuración de Tipografía y Colores</h3>
+                    <p>Define la paleta de colores y tipografía en la personalización del tema o mediante CSS personalizado.</p>
+                </li>
+                <li>
+                    <h3>Creación de Elementos del Cubo de Metatrón</h3>
+                    <p>Utiliza un constructor de páginas (como Elementor) o un bloque HTML personalizado para crear la estructura del Cubo de Metatrón con sus vértices interactivos.</p>
+                </li>
+                <li>
+                    <h3>Implementación de Animaciones</h3>
+                    <p>Añade el código JavaScript y CSS para las animaciones en la sección de código personalizado de tu tema.</p>
+                </li>
+                <li>
+                    <h3>Creación de Páginas y Categorías</h3>
+                    <p>Crea las páginas principales (inicio, cursos, sesiones, membresías) y configura las categorías para los cursos que coincidan con los vértices del Cubo de Metatrón.</p>
+                </li>
+                <li>
+                    <h3>Pruebas Responsivas</h3>
+                    <p>Prueba el sitio en diferentes dispositivos para asegurarte de que el diseño se adapta correctamente, especialmente la estructura del Cubo de Metatrón en dispositivos móviles.</p>
+                </li>
+            </ol>
+            
+            <div class="note">
+                <h3>Plugins Recomendados para WordPress</h3>
+                <ul>
+                    <li><strong>Elementor Pro:</strong> Para crear diseños personalizados sin código</li>
+                    <li><strong>Safe SVG:</strong> Para permitir archivos SVG en WordPress</li>
+                    <li><strong>WP Rocket:</strong> Para optimizar el rendimiento del sitio</li>
+                    <li><strong>Yoast SEO:</strong> Para optimización de motores de búsqueda</li>
+                    <li><strong>WooCommerce:</strong> Si necesitas vender cursos o membresías</li>
+                    <li><strong>LearnDash o LifterLMS:</strong> Para la gestión avanzada de cursos</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Script simple para la navegación suave
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

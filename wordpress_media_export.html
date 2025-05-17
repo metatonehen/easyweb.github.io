@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivos Multimedia para WordPress - METATONEHEN</title>
+    <style>
+        :root {
+            --dark: #0a0722;
+            --indigo: #4A1A9E;
+            --indigo-dark: #2A0A5D;
+            --violet-light: #a675c8;
+            --gold: #D4AF37;
+            --gold-light: #F5D76A;
+            --off-white: #F5F5F5;
+            --white: #FFFFFF;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--dark);
+            color: var(--off-white);
+            line-height: 1.6;
+            margin: 0;
+            padding: 30px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--gold);
+            border-bottom: 1px solid var(--indigo);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .media-item {
+            background: rgba(74, 26, 158, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid var(--indigo);
+        }
+        
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .media-preview {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .media-preview img, .media-preview svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .media-info {
+            padding: 15px;
+        }
+        
+        .media-title {
+            color: var(--gold);
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+        }
+        
+        .media-meta {
+            color: var(--violet-light);
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--indigo), var(--indigo-dark));
+            color: var(--gold);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            border: 1px solid var(--gold);
+            margin-top: 10px;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(to right, var(--gold), var(--gold-light));
+            color: var(--dark);
+        }
+        
+        .instructions {
+            background: rgba(74, 26, 158, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--indigo);
+        }
+        
+        ol, ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .note {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-left: 4px solid var(--gold);
+            margin: 20px 0;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 3px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Archivos Multimedia para WordPress - METATONEHEN</h1>
+        
+        <div class="instructions">
+            <h2>Instrucciones para exportar a WordPress</h2>
+            <ol>
+                <li>Descarga todos los archivos multimedia de esta página.</li>
+                <li>En tu panel de WordPress, ve a <strong>Medios > Añadir nuevo</strong> para subir cada archivo.</li>
+                <li>Una vez subidos, podrás usarlos en tus páginas y publicaciones de WordPress.</li>
+                <li>Para los elementos SVG, asegúrate de que tu tema o un plugin permita subir archivos SVG (por razones de seguridad, WordPress no permite SVG por defecto).</li>
+            </ol>
+            
+            <div class="note">
+                <strong>Recomendación:</strong> Instala el plugin "SVG Support" o "Safe SVG" en WordPress para poder utilizar archivos SVG en tu sitio.
+            </div>
+        </div>
+        
+        <!-- IMÁGENES SVG -->
+        <h2>Geometría Sagrada (SVG)</h2>
+        <p>Estos archivos SVG son ideales para mantener la calidad en todas las resoluciones.</p>
+        
+        <div class="media-grid">
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/static/images/metatron_cube_enhanced.svg" alt="Cubo de Metatrón Mejorado">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Cubo de Metatrón</h3>
+                    <p class="media-meta">Formato: SVG</p>
+                    <p class="media-meta">Uso: Elemento principal, transiciones, página de inicio</p>
+                    <a href="/static/images/metatron_cube_enhanced.svg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/static/images/flower_of_life_enhanced.svg" alt="Flor de la Vida Mejorada">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Flor de la Vida</h3>
+                    <p class="media-meta">Formato: SVG</p>
+                    <p class="media-meta">Uso: Fondo, transiciones, página de inicio</p>
+                    <a href="/static/images/flower_of_life_enhanced.svg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- IMÁGENES PARA CURSOS -->
+        <h2>Imágenes para Cursos</h2>
+        <p>Estas imágenes están optimizadas para usar como miniaturas de cursos.</p>
+        
+        <div class="media-grid">
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/Cube-Small.jpeg" alt="Geometría Sagrada Curso">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Geometría Sagrada</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Miniatura para curso de Geometría Sagrada</p>
+                    <a href="/attached_assets/Cube-Small.jpeg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/playades.webp" alt="Astrología Evolutiva">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Pléyades</h3>
+                    <p class="media-meta">Formato: WEBP</p>
+                    <p class="media-meta">Uso: Miniatura para curso de Astrología</p>
+                    <a href="/attached_assets/playades.webp" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/flower-of-life.jpeg" alt="Flor de la Vida">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Flor de la Vida</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Miniatura para curso de Diseño Humano</p>
+                    <a href="/attached_assets/flower-of-life.jpeg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONSTELACIONES Y ASTROLOGÍA -->
+        <h2>Constelaciones y Astrología</h2>
+        <p>Imágenes relacionadas con astrología para usar en la sección de sesiones.</p>
+        
+        <div class="media-grid">
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/Taurus_and_Hyade-1.jpeg" alt="Tauro y Hyades">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Tauro y Hyades</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Sesiones de astrología, carta natal</p>
+                    <a href="/attached_assets/Taurus_and_Hyade-1.jpeg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/Sirio.jpeg" alt="Sirio">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Sirio</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Sesiones de astrología, backgrounds</p>
+                    <a href="/attached_assets/Sirio.jpeg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/Orion.jpeg" alt="Orión">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Orión</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Sesiones de astrología, backgrounds</p>
+                    <a href="/attached_assets/Orion.jpeg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- IMÁGENES DE GEOMETRÍA SAGRADA -->
+        <h2>Geometría Sagrada Adicional</h2>
+        <p>Imágenes adicionales para ilustrar la geometría sagrada en diversas secciones.</p>
+        
+        <div class="media-grid">
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/fef868e2-bcf6-46db-a91e-02efc2c69f01.png" alt="Patrón Sagrado">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Patrón Sagrado</h3>
+                    <p class="media-meta">Formato: PNG</p>
+                    <p class="media-meta">Uso: Fondos, decoración de páginas</p>
+                    <a href="/attached_assets/fef868e2-bcf6-46db-a91e-02efc2c69f01.png" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/fotomurales-7-chakras-el-cubo-de-metatron-la-flor-de-la-vida.jpg.jpg" alt="Chakras y Metatrón">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Chakras y Metatrón</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Página de membresías, sección de chakras</p>
+                    <a href="/attached_assets/fotomurales-7-chakras-el-cubo-de-metatron-la-flor-de-la-vida.jpg.jpg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/fotomurales-solidos-platonicos-cubo-de-metatron-flor-de-la-vida.jpg.jpg" alt="Sólidos Platónicos">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Sólidos Platónicos</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Página de cursos, geometría sagrada</p>
+                    <a href="/attached_assets/fotomurales-solidos-platonicos-cubo-de-metatron-flor-de-la-vida.jpg.jpg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/cubo_de_metatron_con_pegatina_de_flor_de_vida-rc62e622029544857bb0c3d3613bba932_0ugra_8byvr_644.webp" alt="Metatrón y Flor de Vida">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Metatrón y Flor de Vida</h3>
+                    <p class="media-meta">Formato: WEBP</p>
+                    <p class="media-meta">Uso: Página de inicio, transiciones</p>
+                    <a href="/attached_assets/cubo_de_metatron_con_pegatina_de_flor_de_vida-rc62e622029544857bb0c3d3613bba932_0ugra_8byvr_644.webp" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FONDOS ESPACIALES -->
+        <h2>Fondos Cósmicos</h2>
+        <p>Imágenes de fondo para crear la atmósfera espiritual y cósmica del sitio.</p>
+        
+        <div class="media-grid">
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/radiant-golden-spiral-galaxy-with-sparkling-cosmic-particles-illustrating-the-beauty-of-the-universe-and-the-mysterious-wonders-of-deep-space-video.jpeg" alt="Espiral Galáctica">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Espiral Galáctica</h3>
+                    <p class="media-meta">Formato: JPEG</p>
+                    <p class="media-meta">Uso: Fondos, banners, headers</p>
+                    <a href="/attached_assets/radiant-golden-spiral-galaxy-with-sparkling-cosmic-particles-illustrating-the-beauty-of-the-universe-and-the-mysterious-wonders-of-deep-space-video.jpeg" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/YZ5GFWR565APLBJZ2WI7TP5OPE.webp" alt="Nebulosa">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Nebulosa</h3>
+                    <p class="media-meta">Formato: WEBP</p>
+                    <p class="media-meta">Uso: Fondos, banners, headers</p>
+                    <a href="/attached_assets/YZ5GFWR565APLBJZ2WI7TP5OPE.webp" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+            
+            <div class="media-item">
+                <div class="media-preview">
+                    <img src="/attached_assets/1564595242.webp" alt="Campo Estelar">
+                </div>
+                <div class="media-info">
+                    <h3 class="media-title">Campo Estelar</h3>
+                    <p class="media-meta">Formato: WEBP</p>
+                    <p class="media-meta">Uso: Fondos, banners, headers</p>
+                    <a href="/attached_assets/1564595242.webp" download class="download-btn">Descargar</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="note" style="margin-top: 40px;">
+            <h3>Recomendaciones para WordPress</h3>
+            <ul>
+                <li><strong>Optimiza las imágenes:</strong> Considera usar un plugin como "Smush" para optimizar tus imágenes una vez subidas a WordPress.</li>
+                <li><strong>SVG en WordPress:</strong> Para usar archivos SVG, instala el plugin "Safe SVG" o "SVG Support".</li>
+                <li><strong>Organiza tu biblioteca:</strong> Usa el plugin "Media Library Organizer" o similar para mantener tus archivos multimedia organizados por categorías.</li>
+                <li><strong>Imágenes responsivas:</strong> Asegúrate de que tu tema de WordPress maneje correctamente las imágenes responsivas para diferentes tamaños de pantalla.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
